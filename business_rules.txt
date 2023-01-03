@@ -1,0 +1,42 @@
+What does task master do? 
+
+figma link
+https://www.figma.com/file/hl2BB9qdJhgOg6D4Rw5zIb/Postgres%2C-Fresh%2C-Deno?node-id=0%3A1&t=zTIhpCr7zTUCSo5y-0
+
+Task will allow...
+
+-- Accounts
+- creation of an account
+- editing of account
+- deletion of account
+
+-- Teams
+- creation of team
+- deletion of team
+- creation of roles in team
+- deletion of roles in team
+- inviting users (by link)
+- kicking users
+- banning users
+- users can leave
+
+-- Tasks
+- Creating tasks
+- Creating tasks for future dates
+- Creating tasks for other users (if role permits)
+- Editing tasks
+- Deleting tasks
+- Completing tasks
+- Prerequisite tasks (can assign task that cannot be done before another)
+-? multi-tier task, task has many parts. Once all parts are done, task is complete
+
+-- Team will have
+- name
+- description
+- creation date
+
+-- Account will have
+- name (first, last)
+- username (all lowercase, no special characters)
+- password
+- be associated with their teams
