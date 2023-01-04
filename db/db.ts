@@ -1,4 +1,5 @@
 import { Pool } from "postgres";
+import {testData} from "../types.ts";
 
 //URI FORMAT: postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
 

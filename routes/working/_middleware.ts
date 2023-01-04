@@ -8,11 +8,12 @@ interface State {
 	data: string;
 }
 
+//Middleware function to verify that the user is logged in. The entire 'working' route is protected in this way.
 export async function handler(_req: Request, _ctx: MiddlewareHandlerContext<State>) {
-	//If the request has an Authorization token, continue onto the next section
-
+	//If there is a cookie named 'auth'...
 	if(getCookies(_req.headers)['auth']) {
 		try {
+			//try verifying the secret. If the secret is invalid it throws an error. If valid the route continues
 			await verify(getCookies(_req.headers)['auth'], jwt_secret, 'HS512');
 			return _ctx.next();
 		} catch (_err) {

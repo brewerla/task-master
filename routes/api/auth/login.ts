@@ -4,7 +4,12 @@ import { create } from "https://deno.land/x/djwt@v2.2/mod.ts";
 
 const jwt_secret = Deno.env.get("JWT_SECRET") as string;
 
-
+/*
+* Note about storage of JWT.
+* I saw information saying that the JWT was unsafe to store in cookies and should be stored in local storage.
+* I also found information saying that storing in local storage was unsafe and should be stored in a http only cookie
+* It seems that the latter is the more secure option and that is the form I chose to implement.
+*/
 
 export const handler = async (_req: Request, _ctx: HandlerContext): Promise<Response> => {
 	//See if the user information matches here
